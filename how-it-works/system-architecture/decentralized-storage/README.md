@@ -8,13 +8,13 @@ The idOS utilizes Kwil to offer unparalleled privacy and compliance.
 
 ## Nodes and dStorage Network of Nodes
 
-While there’s no technical argument against running a permissionless network of such nodes, we’re choosing to move carefully to ensure GDPR compliance. This means that idOS will run a dStorage Network of Nodes at launch. Fractal ID, NEAR and Kwil will be the first parties to this network.
+While there’s no technical argument against running a permissionless network of such nodes, we’re choosing to move carefully to ensure GDPR compliance. This means that idOS will run a dStorage Network of Nodes at launch.
 
-<figure><img src="../../../.gitbook/assets/idOS_Gitbook_dStorage Network of Nodes.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ## Authentication
 
-An idOS node's database is capable of authenticating users for both writing and reading to the network based on their key pairs.  By supporting multiple key types, address formats, and signature digests, the idOS is easily capable of validating user access across a wide variety of network standards.
+An idOS node's database is capable of authenticating users for both writing and reading to the network based on their key pairs. By supporting multiple key types, address formats, and signature digests, the idOS is easily capable of validating user access across a wide variety of network standards.
 
 All incoming users are identified by their public key, preferred signature and address format, and key type. The idOS supports both secp256k1 and ed25519 keys, as well as many signature standards common amongst different blockchains.  It is very easy for the idOS to add more signature standards.
 
@@ -39,8 +39,9 @@ To account for this, the idOS exposes a basic interface for how the network shou
 
 Currently, the smart contract adapter supports the following chains:
 
-* EVM-compliant chains
+* EVM-compliant chains (Ethereum, Arbitrum, Etherlink...)
 * NEAR
+* XRPL (coming soon)
 
 ## Relational Database
 
