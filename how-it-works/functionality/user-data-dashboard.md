@@ -1,6 +1,6 @@
 # User Data Dashboard
 
-The User Data Dashboard is one of the tools to allow users to manage their data with the idOS. It is an open-source dApp built on top of the idOS. It is meant to be a resource for teams that want to build their own versions, and individualize their visuals and functionalities.&#x20;
+The [User Data Dashboard](https://dashboard.idos.network/) is one of the tools to allow users to manage their data with the idOS. It is an open-source dApp built on top of the idOS. It is meant to be a resource for teams that want to build their own versions, and individualize their visuals and functionalities.&#x20;
 
 The main functionalities of the User Data Dashboard are:
 
