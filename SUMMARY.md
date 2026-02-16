@@ -1,59 +1,59 @@
 # Table of contents
 
-* [👋 Welcome to idOS](README.md)
+## OVERVIEW
 
-## 🌐 OVERVIEW
+***
 
-* [What is idOS?](overview/what-is-idos.md)
-* [Why is idOS needed?](overview/why-is-idos-needed.md)
-* [What data? How is it stored?](overview/what-data-how-is-it-stored.md)
-* [The idOS Consortium](overview/the-idos-consortium.md)
-* [FAQs](overview/faqs.md)
+* [What is idOS?](README.md)
+* [Why idOS?](why-idos.md)
+* [What is self-custodial data?](what-is-self-custodial-data.md)
+* [Market focus](market-focus.md)
+* [Example use cases](example-use-cases/README.md)
+  * [Neobank/wallet integration](example-use-cases/neobank-wallet-integration.md)
+  * [Financial module integration](example-use-cases/financial-module-integration.md)
+  * [TradFi → onchain integration](example-use-cases/tradfi-onchain-integration.md)
+* [The idOS Consortium](the-idos-consortium.md)
 
-## ⚙️ HOW IT WORKS
+## HOW IT WORKS
 
-* [System architecture](how-it-works/system-architecture/README.md)
-  * [Roles (main stakeholders)](how-it-works/system-architecture/roles-main-stakeholders.md)
-  * [Decentralized storage](how-it-works/system-architecture/decentralized-storage/README.md)
-    * [Database overview](how-it-works/system-architecture/decentralized-storage/database-overview.md)
-    * [Access control](how-it-works/system-architecture/decentralized-storage/access-control.md)
-    * [W3C Verifiable Credentials](how-it-works/system-architecture/decentralized-storage/w3c-verifiable-credentials.md)
-  * [Data flows](how-it-works/system-architecture/data-flows.md)
-  * [On-chain access grants](how-it-works/system-architecture/on-chain-access-grants.md)
-* [Functionality](how-it-works/functionality/README.md)
-  * [Compliant dStorage](how-it-works/functionality/compliant-dstorage.md)
-  * [Standard identity formats](how-it-works/functionality/standard-identity-formats.md)
-  * [Granting data access](how-it-works/functionality/granting-data-access.md)
-  * [User Data Dashboard](how-it-works/functionality/user-data-dashboard.md)
-* [Encryption](how-it-works/encryption.md)
-* [Tools](how-it-works/tools.md)
-* [Product roadmap](how-it-works/product-roadmap.md)
-* [Progressive decentralization](how-it-works/progressive-decentralization.md)
-* [Challenges ahead](how-it-works/challenges-ahead.md)
+* [System design](how-it-works/system-design.md)
+* [Key flows](how-it-works/key-flows/README.md)
+  * [Encryption flows](how-it-works/key-flows/encryption-flows.md)
+  * [Data flows](how-it-works/key-flows/data-flows.md)
+* [Biometrics & idOS FaceSign (Beta)](how-it-works/biometrics-and-idos-facesign-beta.md)
+* [MPC for encryption keys](how-it-works/mpc-for-encryption-keys.md)
+* [FAQs - Users](how-it-works/faqs-users.md)
+* [Security](how-it-works/security.md)
+* [Bug bounty program](how-it-works/bug-bounty-program.md)
 
-## 🛠️ DEVELOPER DOCS
+## COMPLIANCE
 
-* [dApp SDK integration](developer-docs/dapp-sdk-integration.md)
-* [Integration technical support](developer-docs/integration-technical-support.md)
+* [Legal Assessment](compliance/legal-assessment.md)
+* [idOS Regulatory approach](compliance/idos-regulatory-approach.md)
+* [KYC Re-usability](compliance/kyc-re-usability/README.md)
+  * [Passporting](compliance/kyc-re-usability/passporting.md)
+  * [Data ingestion](compliance/kyc-re-usability/data-ingestion.md)
+  * [Case studies for KYC re-usability](compliance/kyc-re-usability/case-studies-for-kyc-re-usability.md)
+* [Compliance overview](compliance/compliance-overview/README.md)
+  * [idOS & Regulatory frameworks](compliance/compliance-overview/idos-and-regulatory-frameworks.md)
+* [idOS Compliance partners](compliance/idos-compliance-partners.md)
 
-## ⚖️ LEGAL DOCS
+***
 
-* [Introduction](legal-docs/introduction.md)
-* [Data and concepts](legal-docs/data-and-concepts.md)
-* [Data privacy and protection](legal-docs/data-privacy-and-protection/README.md)
-  * [Legal basis for profile creation and management](legal-docs/data-privacy-and-protection/legal-basis-for-profile-creation-and-management.md)
-  * [Legal basis for sharing data ](legal-docs/data-privacy-and-protection/legal-basis-for-sharing-data.md)
-  * [Data processing location](legal-docs/data-privacy-and-protection/data-processing-location.md)
-  * [User identification and on-chain data](legal-docs/data-privacy-and-protection/user-identification-and-on-chain-data.md)
-  * [The right to be forgotten ](legal-docs/data-privacy-and-protection/the-right-to-be-forgotten.md)
-  * [Data portability ](legal-docs/data-privacy-and-protection/data-portability.md)
-  * [Data rectification](legal-docs/data-privacy-and-protection/data-rectification.md)
-  * [Third-party data management policies](legal-docs/data-privacy-and-protection/third-party-data-management-policies.md)
-* [Identity data for obligated entities](legal-docs/identity-data-for-obligated-entities/README.md)
-  * [Data retention obligations](legal-docs/identity-data-for-obligated-entities/data-retention-obligations.md)
-  * [Identity verification providers as issuers](legal-docs/identity-data-for-obligated-entities/identity-verification-providers-as-issuers.md)
-* [idOS software license](legal-docs/idos-software-license.md)
+* [Legal Considerations](legal-considerations.md)
 
-## 📣 COMMUNITY & MARKETING
+## IDOS Token Launch
 
-* [Community & social](community-and-marketing/community-and-social.md)
+* [Token Economy & Revenue Streams](idos-token-launch/token-economy-and-revenue-streams.md)
+* [Token Allocation & Distribution](idos-token-launch/token-allocation-and-distribution.md)
+* [FAQs - Token Launch](idos-token-launch/faqs-token-launch.md)
+* [Official links](idos-token-launch/official-links.md)
+
+## Integrate
+
+* [Journey Overview](integrate/journey-overview.md)
+* [Consumer guide](integrate/consumer-guide.md)
+* [Issuer guide](integrate/issuer-guide.md)
+* [FAQs - Developers](integrate/faqs-developers.md)
+* [Copy of idOS SDKs](integrate/copy-of-idos-sdks.md)
+* [Getting Started With the SDKs](integrate/getting-started-with-the-sdks.md)

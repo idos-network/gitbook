@@ -1,98 +1,35 @@
----
-description: The identity layer of web3
-cover: .gitbook/assets/idOS_Gitbook_hero.jpg
-coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
+# What is idOS?
 
-# 👋 Welcome to idOS
+**idOS** (identity operating system) is a decentralized storage and access management network specifically designed to store user data. \
+\
+idOS brings **portable identity to the stablecoin economy**. Allowing users to onboard to stablecoin apps and share their data as easily as moving their money, on- and off-chain.\
+\
+[The idOS Storage Network](how-it-works/system-design.md) (L1) enables private and self-sovereign data storage, and allow users to share access to their encrypted data with applications and businesses across the internet. The idOS Economy Network (coming soon, an Arbitrum Orbit chain) implements a flexible data economy in smart contracts and meters the usage of the Storage Network. Applications can use the idOS SDK to perform all core functions they'd need to interact with idOS.&#x20;
 
-{% hint style="info" %}
-**idOS (Identity Operating System) is the identity layer of web3.**\
-Chain-agnostic, Compliant, Self-sovereign and Decentralized.
-{% endhint %}
+<figure><img src=".gitbook/assets/idOS Architecture – Simplified.jpg" alt=""><figcaption></figcaption></figure>
 
-{% hint style="success" %}
-If your are looking to integrate the idOS, please visit [dapp-sdk-integration.md](developer-docs/dapp-sdk-integration.md "mention")&#x20;
-{% endhint %}
+## An industry-wide effort&#x20;
 
-## TL;DR
+idOS is an open-source, composable and chain-agnostic network that was founded and funded by an industry-wide [consortium of ecosystems and industry players](the-idos-consortium.md) to finally unlock self-custodial data and decentralized identity. The idOS Storage Network is its own chain, but seamlessly connects to any other ecosystem and supports all leading blockchain ecosystem wallet signatures.&#x20;
 
-#### [What is idOS?](./#what-is-the-idos)
-
-idOS, AKA Identity Operating System, is a decentralized storage and access management protocol designed to serve as the identity layer of web3. It aims to revolutionize the way we manage and control our digital identity and credentials in a decentralized world. Built on the principles of chain-agnosticism, compliance, self-sovereignty and decentralization, idOS empowers users to own, manage, and securely store their identity data. idOS is [the place to store any sort of identity-related user data](overview/what-data-how-is-it-stored.md) (i.e. from KYC credentials to user social profiles) and connect it anywhere across web3.
-
-[**Why is idOS needed?**](overview/why-is-idos-needed.md)
-
-In an era where data breaches, unauthorized data access, and privacy concerns are rampant, idOS addresses critical issues such as data security, user experience, and bringing new real-word use cases to web3. It offers a user-centric approach, enabling individuals to have complete control over their data without third-party intermediation. This is crucial for scalable user adoption and compliance with data protection regulations like GDPR. By focusing on the user, idOS aims to solve the challenges of identity management in a decentralized ecosystem, making it a reliable and secure choice for builders and users alike.
-
-[**Key features of idOS**](overview/what-is-idos.md#how-is-the-idos-different-from-existing-identity-solutions) - How is it different from existing identity solutions
-
-1. **Chain-agnosticism**: idOS is open-source, composable and chain-agnostic. It can adapt to meet the demands of a growing user base. Its architecture is designed for composability, allowing for the integration of additional new features or already existing solutions as the system grows.
-2. **Compliance**: Designed to be in line with data protection laws, idOS is a reliable choice for dApps that require compliance with data protection regulations like GDPR. It ensures that both users and businesses can navigate the complex landscape of data protection laws with ease to bring new regulated use cases to web3.
-3. **Self-sovereign data management**: Users have the autonomy to view, add, share, and revoke access to their data and credentials. They can manage their identity in a self-sovereign manner, free from third-party control.
-4. **Decentralization**: idOS utilizes a dStorage Network of Nodes to ensure data availability, even when the user is offline (unlike with identity wallets). This decentralized approach enhances data security and availability, making it resilient against centralized points of failure.
-
-[**The idOS Consortium**](overview/the-idos-consortium.md)
-
-idOS is a joint effort and backed by leading ecosystems **Arbitrum** Foundation, **Circle** (through its affiliate Circle Ventures), **Ripple**, **NEAR Foundation**, **Aleph Zero** Foundation, **Radix** and the **Tezos** Foundation (Etherlink). These partners actively contribute to the development, adoption, and scalability of idOS, enhancing its utility and reach. Each partner brings unique capabilities and expertise to the table, enriching the idOS ecosystem and ensuring user adoption. Do you want to contribute to the future of identity? Come build with us!
-
-[**System architecture**](how-it-works/system-architecture/)
-
-idOS is composed of two main elements: a [dStorage Network of Nodes](how-it-works/system-architecture/decentralized-storage/) and an [Access Management Protocol](how-it-works/functionality/granting-data-access.md). These components work in tandem to provide a secure and efficient identity management system. idOS also offers an [SDK for dApps](developer-docs/dapp-sdk-integration.md) to integrate seamlessly and a [User Data Dashboard](how-it-works/functionality/user-data-dashboard.md) for users to manage their stored data. This architecture is the backbone of idOS, ensuring that it can deliver on its promise of secure, decentralized identity management.
-
-[**Roles and Data Flows in idOS**](how-it-works/system-architecture/roles-main-stakeholders.md)
-
-* **Users**: Users are at the center of the idOS ecosystem. They can view, add, share, and revoke access to their data. All identity data is encrypted by default by the user before being added to idOS, ensuring maximum security. Users have full control over who has access to their data, making idOS a truly user-centric and self-sovereign system.
-* **dApps (across different blockchain ecosystems)**: Decentralized applications can request data access from users and can check that the data provided by the user has been verified by a trusted credential provider or data verifier. This enables dApps to offer personalized or regulated services without compromising user privacy.
-* **Node operators**: Node operators host the idOS' encrypted data and execute the idOS dStorage Network of Nodes. They enforce access rights and block unauthorized access, ensuring that only authorized entities can access user data. Node operators are the custodians of (encrypted) user data, playing a crucial role in maintaining the integrity and security of idOS.
-* **Identity verification providers**: Data providers supply verified data in the W3C verifiable credential standard. They play a crucial role in idOS by helping users to add verified data to their profiles. Data providers and verifiers add value to the idOS ecosystem by ensuring that the data within the idOS is reliable and trustworthy.
-
-[**Data structure & Schema**](broken-reference)
-
-While it is possible to add any type of data into the nodes, idOS encourages and empowers verified data to be stored as [W3C Verifiable Credentials](how-it-works/system-architecture/decentralized-storage/w3c-verifiable-credentials.md). Data is structured in the form of a [relational database](how-it-works/system-architecture/decentralized-storage/database-overview.md) utilizing Kwil's infrastructure.
-
-[**Security and Encryption**](how-it-works/encryption.md)
-
-idOS follows high standards of encryption to ensure data security. All identity data stored is user-encrypted before being added to idOS, and it is stored in a decentralized manner across multiple nodes. idOS employs state-of-the-art encryption algorithms to secure user data, making it one of the most secure identity management systems available.
-
-[**Progressive Decentralization**](how-it-works/progressive-decentralization.md)
-
-idOS has a roadmap for progressive decentralization. It plans to deploy across multiple decentralized chains, ensuring scalability and security. By adopting a multi-chain approach, idOS aims to become a universal identity layer that can be integrated into various blockchain ecosystems. This progressive decentralization strategy ensures that idOS remains agile and adaptable, ready to meet the challenges of a rapidly evolving digital landscape.
+Effectively bring financial applications and users onchain requires a self-custodial way to store and share data, to yank it out of walled gardens and enable reusability. The idOS Consortium partners came together to settle on a joint and composable stack instead of each building their own.&#x20;
 
 
 
-**Quick links:**
+## An easy way to onboard users for the onchain economy&#x20;
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+Don't take our word for it: idOS is live and you can go though a demo [here](https://consumer-and-issuer-demo.playground.idos.network/) to see a KYC re-usability flow for a stablecoin neobank that offers a self-custodial banking product as well as a third party self-custodial card.&#x20;
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+<figure><img src=".gitbook/assets/idOS_KYC_Reusability (1).jpg" alt=""><figcaption></figcaption></figure>
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+Onchain financial fintechs and neobanks (i.e. stablecoin applications) are bringing open source, permissionless infrastructure that relays on stablecoin rails into our daily financial transactions. Our [thesis ](market-focus.md)is that for decentralized identity to finally pick up, we need to solve the hardest, most pressing problem: KYC-reusability.&#x20;
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+## A different approach to making decentralized identity (finally) happen
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+The team behind idOS has been working on compliance, identity and data storage in web3 since 2017. Giving users back control over their own identity and data on the internet has been one of the biggest promises and – to date – failures of web3. So why now and why idOS?
+
+The need for decentralized identity and storage went from 'nice to have' to 'crucial for businesses'. We are seeing an advent of a global open source financial modularized vertical that will require a common identity stack. AI is breaching traditional measures to keep misinformation at bay. As our lives become digital, our governance systems should also do, but today we don't have the notion of 'a human' online. The need is pressing.&#x20;
+
+idOS has a radical different approach, puts user data availability front and center. idOS was built to work under the scrutiny of compliance officers, security researchers and product designers. The idOS main feature is to align data privacy, financial regulation and decentralized storage in an elegant way by having a holistic product approach that includes legal as an engineering function.
+
+The idOS Storage Network is built to work in the real world, to help builders bring open source modules onchain, and help real users onboard and be in control.&#x20;
