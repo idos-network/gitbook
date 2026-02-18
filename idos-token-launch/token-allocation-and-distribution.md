@@ -11,7 +11,7 @@ This is a marketing communication. White Paper [here](https://www.idos.network/b
 IDOS is an **ERC-20** token, first deployed on **Arbitrum One**. The token has a **fixed total supply of 1,000,000,000** (1 billion) tokens.
 
 \
-As we approach the Token Distribution Event (**TDE**, expected Q4 2025), here’s a transparent look at how the IDOS token supply will be allocated, vested, and released over time.\
+Here’s a transparent look at how the IDOS token supply will be allocated, vested, and released over time.\
 ‍
 
 ### &#x20;Allocation Overview
