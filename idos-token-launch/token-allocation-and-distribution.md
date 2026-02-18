@@ -70,9 +70,10 @@ The IDOS token exists to align incentives between **users, builders, integrators
 **5-year Token Distribution Schedule**\
 **‍**Please notice the Staking Rewards bucket goes beyond the 5-year schedule
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
-### &#x20; **Staking Rewards**
+\
+**Staking Rewards**
 
 Staking is the main mechanism for idOS to bootstrap participation and network security. A total of **150 million IDOS (15% of total supply)** is allocated to staking rewards, planned to be distributed across **10 years** in a staged emission schedule that balances early participation with long-term sustainability:\
 ‍
