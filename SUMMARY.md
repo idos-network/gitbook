@@ -20,7 +20,7 @@
 * [Key flows](how-it-works/key-flows/README.md)
   * [Encryption flows](how-it-works/key-flows/encryption-flows.md)
   * [Data flows](how-it-works/key-flows/data-flows.md)
-* [Biometrics & idOS FaceSign (Beta)](how-it-works/biometrics-and-idos-facesign-beta.md)
+* [idOS FaceSign](how-it-works/biometrics-and-idos-facesign-beta.md)
 * [MPC for encryption keys](how-it-works/mpc-for-encryption-keys.md)
 * [FAQs - Users](how-it-works/faqs-users.md)
 * [Security](how-it-works/security.md)
