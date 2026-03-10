@@ -39,19 +39,17 @@ These are other parties that bear influence in the system, even though they're n
 
 User data in idOS is stored the idOS Storage Network, a decentralized layer 1 blockchain secured and run by the idOS Operators to ensure data privacy, security, and availability. The storage network handles authentication, consensus, data storage, encryption & signing and RPC load balancing for idOS, and consists of two major core components:&#x20;
 
-* **idOS Storage Network Nodes**: These nodes form the backbone of the idOS system, providing decentralized storage and retrieval of user data. They are built on [Kwil](https://www.kwil.com/), a decentralized database platform, and include idOS-specific extensions to support the system's unique requirements. These nodes operate according to a predefined schema, ensuring data consistency and integrity. Deployed behind a KGW controlled by the idOS Association, node operators talk to each other through AWS VPC peering. We're also open to supporting WireGuard/Tailscale.
+* **idOS Storage Network Nodes**: These nodes form the backbone of the idOS system, providing decentralized storage and retrieval of user data. They are built on [Kwil](https://www.kwil.com/), a decentralized database platform, and include idOS-specific extensions to support the system's unique requirements. These nodes operate according to a predefined schema, ensuring data consistency and integrity. Deployed behind a KGW controlled by the idOS Association, node operators talk to each other through AWS VPC peering. We're also open to supporting WireGuard.
   * **Relevant repos**:
     * [https://github.com/idos-network/idos-kwild](https://github.com/idos-network/idos-kwild) (🚧 not yet public 🚧)
     * [https://github.com/idos-network/idos-schema](https://github.com/idos-network/idos-schema)
+* **KGW (Kwil GateWay)**: A load balancer and RPC gateway that sits in front of all idOS Storage Network Nodes. It also holds access cookies, which make it possible for logged in users to not have to sign every read request to the nodes.
+  * **Relevant repos**:
+    * [https://github.com/idos-network/kgw](https://github.com/idos-network/kgw) (🚧 not yet public 🚧): idOS's kgw Docker image
   * **Deployments**:
     * _Production_: [https://nodes.idos.network/](https://nodes.idos.network/)
     * _Playground_: [https://nodes.playground.idos.network/](https://nodes.playground.idos.network/)
-* **KGW (Kwil GateWay)**: A load balancer and RPC gateway that sits in front of all idOS Storage Network Nodes. It also holds access cookies, which make it possible for logged in users to not have to sign every read request to the nodes.
-  * **Relevant repos**:
-    * https://github.com/idos-network/kgw (🚧 not yet public 🚧): idOS's kgw Docker image
 * **Native modules (**&#xD83D;� Coming soon 🚧): idOS nodes will have specialized "sidecar" components implemented alongside the core network functionality for additional features like TSS-MPC based encryption/decryption and decentralizated biometric authentication. &#x20;
-
-####
 
 #### **Storage Network Data Architecture**
 
@@ -149,7 +147,7 @@ The idOS Storage Network utilizes [Kwil](https://www.kwil.com/), a decentralized
 
 #### Become a Node Operator
 
-Currently, all idOS nodes are operated by the idOS Association, ensuring stability and security in the early stages. However, we are actively onboarding new node operators in H2 2025, with a long-term goal of fully decentralizing the network. Initially the network will run an auction for 20 operator slots, and all operators will be KYB'd by the idOS Association.&#x20;
+Currently, all idOS nodes are operated by the idOS Association, ensuring stability and security in the early stages. We are actively onboarding new node operators, with a long-term goal of fully decentralizing the network. Initially the network will run an auction for 20 operator slots, and all operators will be KYB'd by the idOS Association.&#x20;
 
 If you are interested in running a node and contributing to the privacy-preserving identity ecosystem, reach out to us to learn more about technical requirements and incentives for operators.
 
@@ -210,24 +208,6 @@ idOS provides several application-layer tools that serve different stakeholders 
   * **Deployments**:
     * _Production_: [https://enclave.idos.network/](https://enclave.idos.network/)
     * _Playground_: [https://enclave.playground.idos.network/](https://enclave.playground.idos.network/)
-*   **idOS Isle**:
-
-    > 🚧 Still under construction 🚧
-    >
-    > The idOS Isle is still not ready for external developer usage. However, you can see it in action today in the Consumer & Issuer Demo.
-
-    A full-featured, standard UI component that dApps can integrate into their applications. The Isle provides a seamless user experience for interacting with idOS, including profile creation, identity verification, and credential management. It simplifies the integration process for developers while maintaining the system's security and privacy standards.
-
-    * **Relevant repo folder**:
-      * [apps/isle](https://github.com/idos-network/idos-sdk-js/blob/main/apps/isle)
-    * **Deployments**:
-      * _Production_: [https://isle.idos.network/](https://isle.idos.network/)
-      * _Playground_: [https://isle.playground.idos.network/](https://isle.playground.idos.network/)
-* **Passporting Server**: A backend service that facilitates the sharing and verification of credentials between different entities with a very specific workflow. It plays a key role in enabling interoperability between different organizations who share mutually compatible compliance requirements. Unless your compliance officer tells you to use this, you don't have to.
-  * **Relevant repo folder**:
-    * [apps/passporting-server](https://github.com/idos-network/idos-sdk-js/blob/main/apps/passporting-server)
-  * **Deployments**:
-    * There are only deployments to support the demo applications. Each Passporting participant will have to run their own passporting server.
 * 🚧 **Network explorer:** In the future, idOS will provide an open-source, hosted explorer for low-level idOS network activity. 🚧
 
 ### Demos
@@ -241,15 +221,10 @@ idOS provides several application-layer tools that serve different stakeholders 
     * **Deployments**:
       * _Playground_: [https://consumer-and-issuer-demo.playground.idos.network](https://consumer-and-issuer-demo.playground.idos.network/)
         * Alternative URL: [https://demo.idos.network](https://demo.idos.network/)
-* **ACME Card Provider Demo**: This is the sibling demo application of Consumer & Issuer Demo. It just shows its status.
-  * **Relevant repo folder**:
-    * [examples/passporting](https://github.com/idos-network/idos-sdk-js/blob/main/examples/passporting)
-  * **Deployments**:
-    * _Playground_: [https://acme-card-provider-demo.playground.idos.network/](https://acme-card-provider-demo.playground.idos.network/)
 
 ## Wallets/signers and signature schemes
 
-idOS was designed to support any type of authenticators, as long as they're deterministic and self-contained. This enables us to quickly become compatible with chains that decided to have their own signing schemes. We currently have support for EVM (secp256k1) and NEAR (ed25519), and adding a new one is fairly straightforward, so we will be adding support for new chains starting in Q3. If you have a use case on an unsupported chain, please reach out to us at contact@idos.network.&#x20;
+idOS was designed to support any type of authenticators, as long as they're deterministic and self-contained. This enables us to quickly become compatible with chains that decided to have their own signing schemes. We currently have support for EVM (secp256k1) and NEAR (ed25519), and adding a new one is fairly straightforward. If you have a use case on an unsupported chain, please reach out to us at contact@idos.network.&#x20;
 
 Currently supported by the SDK, and verifiable for auth with the idOS network (others to be added in the future):
 
