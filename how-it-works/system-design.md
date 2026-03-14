@@ -1,7 +1,5 @@
 # System design
 
-<figure><img src="../.gitbook/assets/What_is_idOS (1).jpg" alt=""><figcaption></figcaption></figure>
-
 ## Overview
 
 idOS is a decentralized identity system that enables secure storage, verification, and sharing of personal data through blockchain technology. It provides a framework for users to own their data while allowing trusted entities to store, access, and verify it in a privacy-preserving manner. It is composed of the idOS Storage Network, the idOS Economy Network, and a set of SDKs and application-layer tools for developers and users.&#x20;
@@ -49,7 +47,7 @@ User data in idOS is stored the idOS Storage Network, a decentralized layer 1 bl
   * **Deployments**:
     * _Production_: [https://nodes.idos.network/](https://nodes.idos.network/)
     * _Playground_: [https://nodes.playground.idos.network/](https://nodes.playground.idos.network/)
-* **Native modules (**&#xD83D;� Coming soon 🚧): idOS nodes will have specialized "sidecar" components implemented alongside the core network functionality for additional features like TSS-MPC based encryption/decryption and decentralizated biometric authentication. &#x20;
+* **Native modules (**&#xD83D;� Coming soon 🚧): idOS nodes will have specialized "sidecar" components implemented alongside the core network functionality for additional features like TSS-MPC based encryption/decryption and TEE-secured biometric authentication. &#x20;
 
 #### **Storage Network Data Architecture**
 
@@ -61,7 +59,7 @@ Here's an abridged visual representation of the key concepts and relationships i
 
 * **User**: The central identity entity in the system, representing a unique person or organization. Users control their profiles through their blockchain wallets and manage how their data is shared.
   * **User Profile**: This is an informal, nebulous, term to refer generally to all the information a user controls.
-* **Wallet**: Blockchain wallets that authenticate a user. A user can link multiple wallets across different chains (EVM, NEAR) to their idOS profile to provide flexible authentication options.
+* **Wallet**: Blockchain wallets that authenticate a user. A user can link multiple wallets across different chains (EVM, NEAR, etc) to their idOS profile to provide flexible authentication options.
 * **Credential**: Verified claims or attestations about a user.&#x20;
   * Notable credential fields are:
     * **User**: The individual to whom this credential was issued and whose information the credential verifies.
@@ -147,7 +145,7 @@ The idOS Storage Network utilizes [Kwil](https://www.kwil.com/), a decentralized
 
 #### Become a Node Operator
 
-Currently, all idOS nodes are operated by the idOS Association, ensuring stability and security in the early stages. We are actively onboarding new node operators, with a long-term goal of fully decentralizing the network. Initially the network will run an auction for 20 operator slots, and all operators will be KYB'd by the idOS Association.&#x20;
+Currently, all idOS nodes are operated by the idOS Association and a few trusted node operators ([Horizen](https://www.horizen.io/), [Meta Pool](https://www.metapool.app/)), ensuring stability and security in the early stages. We are actively onboarding more node operators, with a long-term goal of fully decentralizing the network. Initially the network will run an auction for 20 operator slots, and all operators will be KYB'd by the idOS Association.&#x20;
 
 If you are interested in running a node and contributing to the privacy-preserving identity ecosystem, reach out to us to learn more about technical requirements and incentives for operators.
 
@@ -155,7 +153,14 @@ If you are interested in running a node and contributing to the privacy-preservi
 
 #### idOS Economy Network Components
 
-🔭 The idOS Economy Network is still under active development, but will consist of an Arbitrum Orbit L2 blockchain settling to Ethereum, smart contracts implementing staking, gas and access grant fee payments, the idOS token and other logic related to making the economy self-sustainable for all participants.&#x20;
+The idOS Economy Network is a collection of smart contracts on Arbitrum One. There are:
+
+* [$IDOS token](https://arbiscan.io/address/0x68731d6F14B827bBCfFbEBb62b19Daa18de1d79c)
+* [Staking](https://arbiscan.io/address/0x6132f2ee66dec6bdf416bda9588d663eaceec337): allows people to vote for nodes operators, and allows slashing of misbehavior
+* [$IDOS Kwil Escrow](https://arbiscan.io/address/0xBe34524b5CcEb47eEf931D71c77156F5EeA4d677): moves $IDOS from Arbitrum One to Kwil
+* [USDC Kwil Escrow](https://arbiscan.io/address/0x8444FC33A0c6135B829d020821D42F2E7E81151f): moves USDC from Arbitrum One to Kwil
+
+The idOS Economy Network is still under active development, with the objective of making the economy self-sustainable for all participants.
 
 ## Integration Layer
 
@@ -212,15 +217,14 @@ idOS provides several application-layer tools that serve different stakeholders 
 
 ### Demos
 
-*   **Consumer & Issuer Demo**: This is branded generally as "Neobank". It's meant to demonstrate how a neobank that's using a credit card partner (ACME Card Provider) can share credentials using idOS.
-
-    Note that its KYC process accepts anything resembling an official document and doesn't force the face to match with what's on the document.
-
-    * **Relevant repo folder**:
-      * [examples/consumer-and-issuer](https://github.com/idos-network/idos-sdk-js/blob/main/examples/consumer-and-issuer)
-    * **Deployments**:
-      * _Playground_: [https://consumer-and-issuer-demo.playground.idos.network](https://consumer-and-issuer-demo.playground.idos.network/)
-        * Alternative URL: [https://demo.idos.network](https://demo.idos.network/)
+* **Financial modules**: This is branded generally as "NeoFinance". It's meant to demonstrate how a neobank can integrate with financial modules.
+  * We're currently showcasing:
+    * [Transak](https://transak.com/) for on-ramping with Bank cards, Apple Pay, Google Pay, etc.
+    * [Due](https://www.opendue.com/) for off-ramping to a SEPA account.
+  * **Relevant repo folder**:
+    * [examples/pay-demo](https://github.com/idos-network/idos-sdk-js/tree/main/examples/pay-demo)
+  * **Deployments**:
+    * Production: [https://demo.idos.network](https://demo.idos.network/)
 
 ## Wallets/signers and signature schemes
 
