@@ -48,8 +48,6 @@
     * an Identity Verifier (IdV) that attests that the provided documents are legitimate, and produces a machine-readable version of them;
     * an Issuer, who takes the information given by its IdV service and turns it into a credential. It then signs it and asks the user to insert it into their idOS profile (or does that on the user's behalf, if given a Delegated Write Grant). An IdV can choose to integrate with idOS and fulfill both roles at once;
     * a Consumer, that trusts only a well-defined set of issuers. They start by asking the user for credentials that were emitted by trusted Issuers and follow their compliance needs (the user must/can't live in a specific country, etc). The Consumer and the User do the "for which credentials should I ask for an AG" dance, the Consumer fetches their copy of the credentials, and then verifies it was signed by the Issuer.
-* What is passporting and how does it work technically and legally? Does everyone who is granted access make a local copy of the data?
-  * More details on passporting in idOS can be found [here](../compliance/kyc-re-usability/passporting.md)
 * Can I access a user's idOS credentials from a smart contract?&#x20;
   * Smart contracts can only access data that either lives within their host chain, or is sent directly to them — they don't make external API calls. Since an idOS credential contains personal information, it should neither be hosted on a public chain, or be sent to a public smart contract. If you require authorization at the smart contract level, a tried and true mechanism is to maintain an address allowlist: for example, when you've successfully received an access grant to a valid idOS credential, you could add the user's address(es) to this allowlist.
 

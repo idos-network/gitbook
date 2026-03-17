@@ -2,9 +2,9 @@
 
 #### What is Ingestion and Who is Involved?
 
-Ingestion is one of the KYC Re-usability options within idOS and an alternative mechanism to Passporting that allows data consumers to have access to a KYC data package within a credential, coming directly from the user upon an Access Grant, and verify it before making a decision to onboard the user.&#x20;
+Ingestion is the KYC Re-usability mechanism within idOS. It allows data consumers to have access to a KYC data package within a credential, coming directly from the user upon an Access Grant, and verify it before making a decision to onboard the user.&#x20;
 
-Unlike Passporting, which requires both parties to be obliged entities (entities subject to AML/CFT obligations such as those required to apply Customer Due Diligence measures), Ingestion does not have such a restriction. Any entity—regulated or unregulated—can leverage Ingestion to streamline user onboarding.
+Ingestion does not require both parties to be obliged entities (entities subject to AML/CFT obligations such as those required to apply Customer Due Diligence measures). Any entity, regulated or unregulated, can leverage Ingestion to streamline user onboarding.
 
 Ingestion offers a significant advantage by allowing users to provide their KYC data package to data consumers without resubmitting all required information. While re-authentication measures such as another liveness check at the time of onboarding may still be necessary, the elimination of redundant data submissions reduces onboarding friction and prevents user drop-off.
 
