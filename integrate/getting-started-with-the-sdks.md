@@ -591,7 +591,7 @@ This will create a PRODUCTION build of the SDK using the `.env` file.
 
 ### Getting started with the idOS Consumer Server SDK&#x20;
 
-The idOS Consumer Server SDK is designed for application developers who need to access user credentials through access grants and verify them. This package caters specifically to backend needs. It provides an implementation for decrypting and processing credentials, managing access grants, and implementing [passporting](https://github.com/idos-network/idos-sdk-js/blob/feat/docs-v1/docs/glossary.md#passporting)-compliant credential sharing workflows.
+The idOS Consumer Server SDK is designed for application developers who need to access user credentials through access grants and verify them. This package caters specifically to backend needs. It provides an implementation for decrypting and processing credentials, and managing access grants.
 
 ### What you’ll need
 
@@ -716,7 +716,7 @@ const credentialContents: string = await idos.getSharedCredentialContentDecrypte
 
 Here's how you can get a credential's id you have access to by its content hash.
 
-This is used in [passporting](https://github.com/idos-network/idos-sdk-js/blob/feat/docs-v1/docs/glossary.md#Passporting).
+This is useful when you need to correlate a shared credential with related grant metadata.
 
 ```
 const credentialId: id | null = await idos.getCredentialIdByContentHash('GRANT_HASH')
@@ -729,18 +729,6 @@ const credentialId: id | null = await idos.getCredentialIdByContentHash('GRANT_H
 ```
 const grant: idOSGrant = await idos.getCredentialAccessGrant('CREDENTIAL_ID')
 ```
-
-**Get the reusable credential compliantly**
-
-
-
-This function enables other obligated entities (see [passporting](https://github.com/idos-network/idos-sdk-js/blob/feat/docs-v1/docs/glossary.md#Passporting)) to have access to credential after owner approves sharing their credential with you.
-
-```
-const credential: idOSCredential = await idos.getReusableCredentialCompliantly('GRANT_HASH')
-```
-
-<br>
 
 ### Getting started with the idOS Issuer Server SDK&#x20;
 
@@ -1202,4 +1190,3 @@ You can also create a production build by running the following command in the r
 ```
 pnpm build
 ```
-

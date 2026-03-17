@@ -9,7 +9,7 @@ The review was conducted mainly from the perspective of obliged entities looking
 Key areas of the assessment included:
 
 * KYC data storage
-* KYC Re-usability (including [Passporting](kyc-re-usability/passporting.md) and [Data Ingestion](kyc-re-usability/data-ingestion.md))
+* KYC Re-usability, including [Data Ingestion](kyc-re-usability/data-ingestion.md)
 * Data protection frameworks
 
 We view this as another step forward in helping demonstrate that idOS (and its KYC Re-usability frameworks) is a sophisticated and customisable integration option for regulated entities seeking to streamline their identity workflows and reduce friction in their user onboarding processes while staying in compliance with regulatory standards.

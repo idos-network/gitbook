@@ -31,7 +31,6 @@
 * [Legal Assessment](compliance/legal-assessment.md)
 * [idOS Regulatory approach](compliance/idos-regulatory-approach.md)
 * [KYC Re-usability](compliance/kyc-re-usability/README.md)
-  * [Passporting](compliance/kyc-re-usability/passporting.md)
   * [Data ingestion](compliance/kyc-re-usability/data-ingestion.md)
   * [Case studies for KYC re-usability](compliance/kyc-re-usability/case-studies-for-kyc-re-usability.md)
 * [Compliance overview](compliance/compliance-overview/README.md)
