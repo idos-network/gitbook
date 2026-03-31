@@ -13,7 +13,7 @@ The primary features provided by the Consumer SDK are:
 * requesting access to user credentials, with an optional timelock to prevent premature access revocation;
 * retrieving and verifying credentials you've been granted access to;
 * listing all access grants you've been given by your users;
-* implementing a Passporting-compliant onboarding flow.
+* building compliant credential retrieval flows around standard idOS access grants.
 
 ### Getting started: what you'll need
 
@@ -23,7 +23,7 @@ See [idOS Regulatory approach](https://docs.idos.network/compliance/idos-regulat
 
 * which credential Issuers are you open to trusting;
 * how long, if at all, you need to retain access to user data;
-* whether you’re going to be using Passporting.
+* what additional verification steps, if any, you require before accepting shared credentials.
 
 #### Signature and encryption keys
 
@@ -195,23 +195,10 @@ await idOSConsumer.createAccessGrantByDag({
 });
 ```
 
-**Using passporting**
-
-* TODO: missing code examples for passporting:
-  * ask for credential duplicate (C1.2) separately and before asking for AG
-  * get hash from C1.2 and use it on dAG request
-  * send dAG to own backend, which proxy sends to OE1's passporting server
-
 #### \[ backend ] Retrieving and verifying credential
 
 ```typescript
 const credentialContents: string = await idOSConsumer.getSharedCredentialContentDecrypted('GRANT_DATA_ID')
-```
-
-If you're using passporting:
-
-```typescript
-const credentialContents: string = await idOSConsumer.getReusableCredentialCompliantly('GRANT_DATA_ID')
 ```
 
 If you need a helper to verify that the W3C VC is something you want to trust, here's an example:

@@ -2,13 +2,9 @@
 
 ## Journeys
 
-This document will take you on a long tour that'll encompass most of idOS's concepts and components. It assumes you don't need [Passporting](../compliance/kyc-re-usability/passporting.md), which we will cover in a separate guide.
+This document will take you on a long tour that'll encompass most of idOS's concepts and components.
 
 We strongly recommend you read the[ idOS Storage Network overview page ](/broken/pages/01Q42ZdxzPxrGQDwr0lO)first.
-
-> 🚧 Will change soon 🚧
->
-> We'll add a Passporting journey soon.
 
 ### Cold Start Journey
 
