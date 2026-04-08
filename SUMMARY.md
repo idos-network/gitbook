@@ -2,8 +2,6 @@
 
 ## OVERVIEW
 
-***
-
 * [What is idOS?](README.md)
 * [Why idOS?](why-idos.md)
 * [What is self-custodial data?](what-is-self-custodial-data.md)
