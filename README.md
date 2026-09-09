@@ -8,7 +8,7 @@ slug: /
 \
 idOS brings **portable identity to the stablecoin economy**. Allowing users to onboard to stablecoin apps and share their data as easily as moving their money, on- and off-chain.\
 \
-[The idOS Storage Network](how-it-works/system-design.md) (L1) enables private and self-sovereign data storage, and allow users to share access to their encrypted data with applications and businesses across the internet. The idOS Economy Network (coming soon, an Arbitrum Orbit chain) implements a flexible data economy in smart contracts and meters the usage of the Storage Network. Applications can use the idOS SDK to perform all core functions they'd need to interact with idOS.
+[The idOS Storage Network](how-it-works/system-design.md) (L1) enables private and self-sovereign data storage, and allow users to share access to their encrypted data with applications and businesses across the internet. The idOS Economy Network (rolling out, an Arbitrum Orbit chain) implements a flexible data economy in smart contracts and meters the usage of the Storage Network. Applications can use the idOS SDK to perform all core functions they'd need to interact with idOS.
 
 <figure><img src=".gitbook/assets/idOS Architecture – Simplified.jpg" alt=""><figcaption></figcaption></figure>
 

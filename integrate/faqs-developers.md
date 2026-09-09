@@ -60,7 +60,7 @@
 * How are idOS nodes secured? What happens if an idOS Operator leaks a copy of the database?
   * &#x20;Data is encrypted at the edge before being stored in idOS nodes. This means that a database leak would yield only encrypted data, an an attacker would still require user encryption keys to be able to decrypt data belonging to a particular user. Note also that becoming an idOS Operator and syncing a node with the idOS network is a permissioned operation, requiring authorization from the idOS Association.
 * Is idOS audited, and what was the scope of the audit?
-  * We engaged Resonance to audit our v1 release, which should be completed by the end of May 2025. The scope of the audit is limited to our SDKs and implementation of KwilDB, not KwilDB itself.  We are exploring options to have KwilDB itself independently audited in the future.
+  * We engaged Resonance to audit our v1 release. The scope of the audit was limited to our SDKs and implementation of KwilDB, not KwilDB itself.  We are exploring options to have KwilDB itself independently audited in the future.
 * What is your plan for post-quantum security?
   * Currently, our SDKs implement authenticated asymmetric encryption with x25519-xsalsa20-poly1305. While it is a modern and proven ECIES Hybrid Encryption Scheme, it's not quantum-resistant. Since the idOS Storage Network is encryption-agnostic, it can trivially support any cryptographic protocol, and we want to get way ahead of NIST's ECC deprecations, and follow their Post-Quantum Cryptography Standardization effort towards lattice-based cryptography. We're currently leaning towards a classic McEliece scheme given the relative abundance of supporting libraries. Because of our goal of eventual full decentralization of idOS, we have the ambition to  engage with the cryptography community to cooperate on getting to a cyphering scheme that'll let us accept anybody to become a node operator (and, therefore, have a copy of the cyphertext) without putting users at risk.
 
@@ -69,7 +69,7 @@
 #### **4. Cost & Incentives**
 
 * What are the ongoing costs as an application integrating idOS, and who pays for what? Who pays for gas?
-  * There are currently no ongoing costs, gas or otherwise, involved in integrating idOS. That will change in Q4 2025 when the idOS Economy Network and progressive node decentralization are live, where issuers and consumers will pay gas to node operators for reads and writes, and pay for access grants amongst each other to incentivize the issuance and re-use of verified credentials. When the idOS Economy Network is live, the idOS protocol will take a 25% cut of any access grant fees paid to network participants.
+  * Gas fees are now live: Data Issuers and Data Consumers pay gas (in IDOS) on write operations to the idOS Storage Network, such as issuing credentials or creating access grants.
 
 
 
