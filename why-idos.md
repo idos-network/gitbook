@@ -20,7 +20,7 @@ There is no _second life_, but one life that is more and more online. We do not 
 
 ## Because a data settlement layer is needed for composability
 
-In 2025 we still don't have a decentralized identity system and is not for the lack of trying. Decentralized identity only works if all parts and stakeholders come together and it is impossible to build as a standalone effort. idOS is an effort of radical cooperation even on core levels across the [idOS Consortium](the-idos-consortium.md) partners. idOS aims to become the storage and access management layer across the internet.
+We still don't have a decentralized identity system, and it's not for lack of trying. Decentralized identity only works if all parts and stakeholders come together and it is impossible to build as a standalone effort. idOS is an effort of radical cooperation even on core levels across the [idOS Consortium](the-idos-consortium.md) partners. idOS aims to become the storage and access management layer across the internet.
 
 <figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 

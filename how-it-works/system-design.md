@@ -6,10 +6,6 @@ idOS is a decentralized identity system that enables secure storage, verificatio
 
 Note that idOS is (currently) a permissioned network. While it's (almost) fully open-source, only authorized operators can participate in it. This ensures that consequences (economical, legal, or as appropriate) can be pursued for ill-behaving nodes, ensuring that all node operators are well-incentivized to protect users' privacy and data sovereignty.
 
-> 🚧 Will change soon 🚧
->
-> That `(almost) fully open source` qualifier will disappear soon. We're in the process of preparing some repositories to become public.
-
 > 🔭 Will change later on 🔭
 >
 > We'd rather not be a permissioned network. However, because storing encrypted text publicly is dangerous, until we find a secure way to do it, we're going to keep the network permissioned. When the idOS Economy Network is live, prospective node operators will be KYB'd by the idOS Association and added to the operator set based on stake-weight, and we are exploring ways to shard the idOS Storage Layer to enable fully permissionless validation of idOS.
